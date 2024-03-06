@@ -18,7 +18,8 @@ const getUserID = (req, res) => {
 };
 // updating user name
 const updateUser = (req, res) => {
-  const { id, name, username, city } = req.params;
+  const { id } = req.params;
+  const { name, username, city}=req.body
   const userbyID = users.find((user) => user.id === Number(id));
 
   if (!userbyID) {
